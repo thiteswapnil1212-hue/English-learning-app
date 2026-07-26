@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning - Lesson 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+Marathi:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Floating Decorative Elements -->
+        <div class="floating-elements">
+            <div class="floating-star">⭐</div>
+            <div class="floating-star">✨</div>
+            <div class="floating-star">⭐</div>
+            <div class="floating-star">✨</div>
+            <div class="floating-star">⭐</div>
+            <div class="floating-star">✨</div>
+            <div class="floating-star">⭐</div>
+            <div class="floating-star">✨</div>
+            <div class="floating-cloud">☁️</div>
+            <div class="floating-cloud">☁️</div>
+            <div class="floating-cloud">☁️</div>
+            <div class="floating-cloud">☁️</div>
+            <!-- Classroom Decorations -->
+            <div class="classroom-decoration">📚</div>
+            <div class="classroom-decoration">✏️</div>
+            <div class="classroom-decoration">🎒</div>
+            <div class="classroom-decoration">🌳</div>
+            <div class="classroom-decoration">🌈</div>
+            <div class="classroom-decoration">🎨</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+            <div id="progress-text">0%</div>
+        </div>
+
+        <!-- Lesson Objectives Panel -->
+        <div id="objectives-panel">
+            <button id="toggle-objectives">🎯 Objectives</button>
+            <div id="objectives-content" class="hidden">
+                <h3>Today's Learning Goals</h3>
+                <ul id="objectives-list">
+                    <li class="objective-item" data-complete="false">✓ Say "Hello!"</li>
+                    <li class="objective-item" data-complete="false">✓ Say "My name is..."</li>
+                    <li class="objective-item" data-complete="false">✓ Ask "What is your name?"</li>
+                    <li class="objective-item" data-complete="false">✓ Respond confidently</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stars Counter -->
+        <div id="stars-container">
+            <span id="stars-icon">⭐</span>
+            <span id="stars-count">0</span>
+        </div>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Screens will be rendered here -->
+        </main>
+
+        <!-- Teacher Navigation -->
+        <div id="teacher-nav">
+            <button id="prev-btn" class="nav-btn" disabled aria-label="Previous screen">← Previous</button>
+            <button id="pause-btn" class="nav-btn" aria-label="Pause lesson">⏸ Pause</button>
+            <button id="next-btn" class="nav-btn" aria-label="Next screen">Next →</button>
+            <button id="restart-btn" class="nav-btn" aria-label="Restart lesson" style="background: linear-gradient(135deg, var(--coral-pink), var(--warm-orange));">🔄 Restart</button>
+        </div>
+
+        <!-- Narration Controls -->
+        <div id="narration-controls">
+            <button id="replay-narration-btn" class="narration-btn" onclick="replayNarration()" title="नरेशन परत ऐका / Replay narration">
+                🔊 परत ऐका
+            </button>
+            <div class="narration-speed-group">
+                <span class="narration-label">🐢 गती:</span>
+                <select id="narration-speed" onchange="setNarrationSpeed(this.value)" title="Narration speed">
+                    <option value="normal">साधारण</option>
+                    <option value="slow">हळू</option>
+                    <option value="very-slow">खूप हळू</option>
+                </select>
+            </div>
+            <div id="narration-mode-indicator" class="narration-mode-tts" title="Narration source">
+                🏬 TTS
+            </div>
+        </div>
+
+        <!-- Teacher Notes Panel -->
+        <div id="teacher-notes">
+            <button id="toggle-notes">📝 Teacher Notes</button>
+            <div id="notes-content" class="hidden">
+                <h3>Teacher Notes</h3>
+                <p id="notes-text"></p>
+            </div>
+        </div>
+
+        <!-- Celebration Overlay -->
+        <div id="celebration-overlay" class="celebration-overlay"></div>
+
+        <!-- Buddy the Parrot Mascot -->
+        <div class="buddy-container">
+            <div class="buddy-speech-bubble hidden" id="buddy-speech"></div>
+            <img src="buddy-mascot.svg" alt="Buddy the Parrot" class="buddy-mascot" id="buddy-mascot">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
