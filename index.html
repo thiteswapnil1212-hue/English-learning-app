@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="An interactive English learning app designed for 7th standard students."
+        content="An interactive English learning application designed for Grade 7 students."
     >
 
-    <meta name="theme-color" content="#4f46e5">
+    <meta name="theme-color" content="#1f4e79">
 
-    <title>English Learning App | Grade 7</title>
+    <title>English Learning | Grade 7</title>
 
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+Marathi:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Noto+Sans+Marathi:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 </head>
@@ -30,45 +32,47 @@
     <div id="app">
 
         <!-- =========================================
-             Decorative Classroom Background
+             Application Header
         ========================================== -->
-        <div
-            class="floating-elements"
-            aria-hidden="true"
-        >
-            <div class="floating-star">⭐</div>
-            <div class="floating-star">✨</div>
-            <div class="floating-star">⭐</div>
-            <div class="floating-star">✨</div>
 
-            <div class="floating-cloud">☁️</div>
-            <div class="floating-cloud">☁️</div>
-            <div class="floating-cloud">☁️</div>
-
-            <div class="classroom-decoration">📚</div>
-            <div class="classroom-decoration">✏️</div>
-            <div class="classroom-decoration">🎒</div>
-            <div class="classroom-decoration">🌳</div>
-            <div class="classroom-decoration">🌈</div>
-            <div class="classroom-decoration">🎨</div>
-        </div>
-
-
-        <!-- =========================================
-             Lesson Progress
-        ========================================== -->
         <header class="lesson-header">
 
-            <div
-                id="progress-bar-container"
-                role="progressbar"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                aria-valuenow="0"
-                aria-label="Lesson progress"
-            >
-                <div id="progress-bar"></div>
-                <div id="progress-text">0%</div>
+            <div class="header-content">
+
+                <div class="lesson-brand">
+                    <div class="brand-mark" aria-hidden="true">
+                        EN
+                    </div>
+
+                    <div class="brand-copy">
+                        <span class="brand-title">
+                            English Learning
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Grade 7
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    id="progress-bar-container"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    aria-label="Lesson progress"
+                >
+                    <div class="progress-info">
+                        <span>Lesson progress</span>
+                        <span id="progress-text">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+
             </div>
 
         </header>
@@ -77,6 +81,7 @@
         <!-- =========================================
              Learning Objectives
         ========================================== -->
+
         <aside
             id="objectives-panel"
             aria-label="Lesson objectives"
@@ -88,7 +93,13 @@
                 aria-expanded="false"
                 aria-controls="objectives-content"
             >
-                🎯 Objectives
+                <span>Objectives</span>
+                <span
+                    class="panel-chevron"
+                    aria-hidden="true"
+                >
+                    +
+                </span>
             </button>
 
             <div
@@ -96,7 +107,15 @@
                 class="hidden"
             >
 
-                <h3>What We Learn Today</h3>
+                <div class="panel-heading">
+                    <span class="panel-eyebrow">
+                        TODAY'S LESSON
+                    </span>
+
+                    <h3>
+                        What you will learn
+                    </h3>
+                </div>
 
                 <ul id="objectives-list">
 
@@ -104,32 +123,56 @@
                         class="objective-item"
                         data-complete="false"
                     >
-                        <span aria-hidden="true">✓</span>
-                        <span>Say "Hello!"</span>
+                        <span
+                            class="objective-status"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span>
+                            Say "Hello!"
+                        </span>
                     </li>
 
                     <li
                         class="objective-item"
                         data-complete="false"
                     >
-                        <span aria-hidden="true">✓</span>
-                        <span>Say "My name is..."</span>
+                        <span
+                            class="objective-status"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span>
+                            Say "My name is..."
+                        </span>
                     </li>
 
                     <li
                         class="objective-item"
                         data-complete="false"
                     >
-                        <span aria-hidden="true">✓</span>
-                        <span>Ask "What is your name?"</span>
+                        <span
+                            class="objective-status"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span>
+                            Ask "What is your name?"
+                        </span>
                     </li>
 
                     <li
                         class="objective-item"
                         data-complete="false"
                     >
-                        <span aria-hidden="true">✓</span>
-                        <span>Respond confidently</span>
+                        <span
+                            class="objective-status"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span>
+                            Respond confidently
+                        </span>
                     </li>
 
                 </ul>
@@ -140,28 +183,9 @@
 
 
         <!-- =========================================
-             Stars / Rewards
-        ========================================== -->
-        <div
-            id="stars-container"
-            role="status"
-            aria-live="polite"
-            aria-label="Stars earned"
-        >
-            <span
-                id="stars-icon"
-                aria-hidden="true"
-            >
-                ⭐
-            </span>
-
-            <span id="stars-count">0</span>
-        </div>
-
-
-        <!-- =========================================
              Main Learning Area
         ========================================== -->
+
         <main
             id="main-content"
             tabindex="-1"
@@ -174,6 +198,7 @@
         <!-- =========================================
              Lesson Navigation
         ========================================== -->
+
         <nav
             id="teacher-nav"
             aria-label="Lesson navigation"
@@ -186,8 +211,18 @@
                 disabled
                 aria-label="Go to previous screen"
             >
-                ← Previous
+                <span
+                    class="nav-icon"
+                    aria-hidden="true"
+                >
+                    ←
+                </span>
+
+                <span>
+                    Previous
+                </span>
             </button>
+
 
             <button
                 id="pause-btn"
@@ -196,17 +231,37 @@
                 aria-label="Pause lesson"
                 aria-pressed="false"
             >
-                ⏸ Pause
+                <span
+                    class="nav-icon"
+                    aria-hidden="true"
+                >
+                    ||
+                </span>
+
+                <span>
+                    Pause
+                </span>
             </button>
+
 
             <button
                 id="next-btn"
-                class="nav-btn"
+                class="nav-btn nav-btn-primary"
                 type="button"
                 aria-label="Go to next screen"
             >
-                Next →
+                <span>
+                    Next
+                </span>
+
+                <span
+                    class="nav-icon"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
             </button>
+
 
             <button
                 id="restart-btn"
@@ -214,7 +269,7 @@
                 type="button"
                 aria-label="Restart lesson"
             >
-                🔄 Restart
+                Restart
             </button>
 
         </nav>
@@ -223,6 +278,7 @@
         <!-- =========================================
              Narration Controls
         ========================================== -->
+
         <section
             id="narration-controls"
             aria-label="Narration controls"
@@ -236,7 +292,16 @@
                 title="नरेशन परत ऐका / Replay narration"
                 aria-label="Replay narration"
             >
-                🔊 <span>परत ऐका</span>
+                <span
+                    class="narration-icon"
+                    aria-hidden="true"
+                >
+                    ◀
+                </span>
+
+                <span>
+                    परत ऐका
+                </span>
             </button>
 
 
@@ -246,7 +311,7 @@
                     class="narration-label"
                     for="narration-speed"
                 >
-                    🐢 गती:
+                    गती
                 </label>
 
                 <select
@@ -255,9 +320,17 @@
                     title="Narration speed"
                     aria-label="Narration speed"
                 >
-                    <option value="normal">साधारण</option>
-                    <option value="slow">हळू</option>
-                    <option value="very-slow">खूप हळू</option>
+                    <option value="normal">
+                        साधारण
+                    </option>
+
+                    <option value="slow">
+                        हळू
+                    </option>
+
+                    <option value="very-slow">
+                        खूप हळू
+                    </option>
                 </select>
 
             </div>
@@ -269,7 +342,7 @@
                 title="Narration source"
                 role="status"
             >
-                🔊 TTS
+                TTS
             </div>
 
         </section>
@@ -278,6 +351,7 @@
         <!-- =========================================
              Teacher Notes
         ========================================== -->
+
         <aside
             id="teacher-notes"
             aria-label="Teacher notes"
@@ -289,7 +363,16 @@
                 aria-expanded="false"
                 aria-controls="notes-content"
             >
-                📝 For Teacher Notes
+                <span>
+                    Teacher notes
+                </span>
+
+                <span
+                    class="panel-chevron"
+                    aria-hidden="true"
+                >
+                    +
+                </span>
             </button>
 
             <div
@@ -297,7 +380,17 @@
                 class="hidden"
             >
 
-                <h3>Teacher Notes</h3>
+                <div class="panel-heading">
+
+                    <span class="panel-eyebrow">
+                        TEACHER SUPPORT
+                    </span>
+
+                    <h3>
+                        Teacher Notes
+                    </h3>
+
+                </div>
 
                 <p id="notes-text">
                     Teacher guidance for the current lesson will appear here.
@@ -309,18 +402,9 @@
 
 
         <!-- =========================================
-             Celebration Overlay
-        ========================================== -->
-        <div
-            id="celebration-overlay"
-            class="celebration-overlay"
-            aria-hidden="true"
-        ></div>
-
-
-        <!-- =========================================
              Buddy the Parrot
         ========================================== -->
+
         <div
             class="buddy-container"
             aria-label="Buddy the Parrot"
@@ -346,6 +430,7 @@
         <!-- =========================================
              Screen Reader Status
         ========================================== -->
+
         <div
             id="app-status"
             class="sr-only"
@@ -359,6 +444,7 @@
     <!-- =========================================
          Application Script
     ========================================== -->
+
     <script
         src="app.js"
         defer
