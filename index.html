@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Learning App used for 7th std student</title>
+
+    <meta
+        name="description"
+        content="An interactive English learning app designed for 7th standard students."
+    >
+
+    <meta name="theme-color" content="#4f46e5">
+
+    <title>English Learning App | Grade 7</title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+Marathi:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+Marathi:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
+
     <div id="app">
-        <!-- Floating Decorative Elements -->
-        <div class="floating-elements">
+
+        <!-- =========================================
+             Decorative Classroom Background
+        ========================================== -->
+        <div
+            class="floating-elements"
+            aria-hidden="true"
+        >
             <div class="floating-star">⭐</div>
             <div class="floating-star">✨</div>
             <div class="floating-star">⭐</div>
             <div class="floating-star">✨</div>
-            <div class="floating-star">⭐</div>
-            <div class="floating-star">✨</div>
-            <div class="floating-star">⭐</div>
-            <div class="floating-star">✨</div>
+
             <div class="floating-cloud">☁️</div>
             <div class="floating-cloud">☁️</div>
             <div class="floating-cloud">☁️</div>
-            <div class="floating-cloud">☁️</div>
-            <!-- Classroom Decorations -->
+
             <div class="classroom-decoration">📚</div>
             <div class="classroom-decoration">✏️</div>
             <div class="classroom-decoration">🎒</div>
@@ -34,80 +53,316 @@
             <div class="classroom-decoration">🎨</div>
         </div>
 
-    
-        <div id="progress-bar-container">
-            <div id="progress-bar"></div>
-            <div id="progress-text">0%</div>
-        </div>
 
-        
-        <div id="objectives-panel">
-            <button id="toggle-objectives">🎯 Objectives</button>
-            <div id="objectives-content" class="hidden">
-                <h3>What we learn today</h3>
-                <ul id="objectives-list">
-                    <li class="objective-item" data-complete="false">✓ Say "Hello!"</li>
-                    <li class="objective-item" data-complete="false">✓ Say "My name is..."</li>
-                    <li class="objective-item" data-complete="false">✓ Ask "What is your name?"</li>
-                    <li class="objective-item" data-complete="false">✓ Respond confidently</li>
-                </ul>
+        <!-- =========================================
+             Lesson Progress
+        ========================================== -->
+        <header class="lesson-header">
+
+            <div
+                id="progress-bar-container"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                aria-label="Lesson progress"
+            >
+                <div id="progress-bar"></div>
+                <div id="progress-text">0%</div>
             </div>
-        </div>
 
-        <!-- Stars Counter -->
-        <div id="stars-container">
-            <span id="stars-icon">⭐</span>
+        </header>
+
+
+        <!-- =========================================
+             Learning Objectives
+        ========================================== -->
+        <aside
+            id="objectives-panel"
+            aria-label="Lesson objectives"
+        >
+
+            <button
+                id="toggle-objectives"
+                type="button"
+                aria-expanded="false"
+                aria-controls="objectives-content"
+            >
+                🎯 Objectives
+            </button>
+
+            <div
+                id="objectives-content"
+                class="hidden"
+            >
+
+                <h3>What We Learn Today</h3>
+
+                <ul id="objectives-list">
+
+                    <li
+                        class="objective-item"
+                        data-complete="false"
+                    >
+                        <span aria-hidden="true">✓</span>
+                        <span>Say "Hello!"</span>
+                    </li>
+
+                    <li
+                        class="objective-item"
+                        data-complete="false"
+                    >
+                        <span aria-hidden="true">✓</span>
+                        <span>Say "My name is..."</span>
+                    </li>
+
+                    <li
+                        class="objective-item"
+                        data-complete="false"
+                    >
+                        <span aria-hidden="true">✓</span>
+                        <span>Ask "What is your name?"</span>
+                    </li>
+
+                    <li
+                        class="objective-item"
+                        data-complete="false"
+                    >
+                        <span aria-hidden="true">✓</span>
+                        <span>Respond confidently</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================================
+             Stars / Rewards
+        ========================================== -->
+        <div
+            id="stars-container"
+            role="status"
+            aria-live="polite"
+            aria-label="Stars earned"
+        >
+            <span
+                id="stars-icon"
+                aria-hidden="true"
+            >
+                ⭐
+            </span>
+
             <span id="stars-count">0</span>
         </div>
 
-        <main id="main-content">
-            
+
+        <!-- =========================================
+             Main Learning Area
+        ========================================== -->
+        <main
+            id="main-content"
+            tabindex="-1"
+            aria-live="polite"
+        >
+            <!-- Lesson screens are rendered by app.js -->
         </main>
 
-        <div id="teacher-nav">
-            <button id="prev-btn" class="nav-btn" disabled aria-label="Previous screen">← Previous</button>
-            <button id="pause-btn" class="nav-btn" aria-label="Pause lesson">⏸ Pause</button>
-            <button id="next-btn" class="nav-btn" aria-label="Next screen">Next →</button>
-            <button id="restart-btn" class="nav-btn" aria-label="Restart lesson" style="background: linear-gradient(135deg, var(--coral-pink), var(--warm-orange));">🔄 Restart</button>
-        </div>
 
-        <!-- Narration Controls -->
-        <div id="narration-controls">
-            <button id="replay-narration-btn" class="narration-btn" onclick="replayNarration()" title="नरेशन परत ऐका / Replay narration">
-                🔊 परत ऐका
+        <!-- =========================================
+             Lesson Navigation
+        ========================================== -->
+        <nav
+            id="teacher-nav"
+            aria-label="Lesson navigation"
+        >
+
+            <button
+                id="prev-btn"
+                class="nav-btn"
+                type="button"
+                disabled
+                aria-label="Go to previous screen"
+            >
+                ← Previous
             </button>
+
+            <button
+                id="pause-btn"
+                class="nav-btn"
+                type="button"
+                aria-label="Pause lesson"
+                aria-pressed="false"
+            >
+                ⏸ Pause
+            </button>
+
+            <button
+                id="next-btn"
+                class="nav-btn"
+                type="button"
+                aria-label="Go to next screen"
+            >
+                Next →
+            </button>
+
+            <button
+                id="restart-btn"
+                class="nav-btn restart-btn"
+                type="button"
+                aria-label="Restart lesson"
+            >
+                🔄 Restart
+            </button>
+
+        </nav>
+
+
+        <!-- =========================================
+             Narration Controls
+        ========================================== -->
+        <section
+            id="narration-controls"
+            aria-label="Narration controls"
+        >
+
+            <button
+                id="replay-narration-btn"
+                class="narration-btn"
+                type="button"
+                onclick="replayNarration()"
+                title="नरेशन परत ऐका / Replay narration"
+                aria-label="Replay narration"
+            >
+                🔊 <span>परत ऐका</span>
+            </button>
+
+
             <div class="narration-speed-group">
-                <span class="narration-label">🐢 गती:</span>
-                <select id="narration-speed" onchange="setNarrationSpeed(this.value)" title="Narration speed">
+
+                <label
+                    class="narration-label"
+                    for="narration-speed"
+                >
+                    🐢 गती:
+                </label>
+
+                <select
+                    id="narration-speed"
+                    onchange="setNarrationSpeed(this.value)"
+                    title="Narration speed"
+                    aria-label="Narration speed"
+                >
                     <option value="normal">साधारण</option>
                     <option value="slow">हळू</option>
                     <option value="very-slow">खूप हळू</option>
                 </select>
-            </div>
-            <div id="narration-mode-indicator" class="narration-mode-tts" title="Narration source">
-                🏬 TTS
-            </div>
-        </div>
 
-        <!-- Teacher Notes Panel -->
-        <div id="teacher-notes">
-            <button id="toggle-notes">📝 For Teacher Notes</button>
-            <div id="notes-content" class="hidden">
+            </div>
+
+
+            <div
+                id="narration-mode-indicator"
+                class="narration-mode-tts"
+                title="Narration source"
+                role="status"
+            >
+                🔊 TTS
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             Teacher Notes
+        ========================================== -->
+        <aside
+            id="teacher-notes"
+            aria-label="Teacher notes"
+        >
+
+            <button
+                id="toggle-notes"
+                type="button"
+                aria-expanded="false"
+                aria-controls="notes-content"
+            >
+                📝 For Teacher Notes
+            </button>
+
+            <div
+                id="notes-content"
+                class="hidden"
+            >
+
                 <h3>Teacher Notes</h3>
-                <p id="notes-text"></p>
+
+                <p id="notes-text">
+                    Teacher guidance for the current lesson will appear here.
+                </p>
+
             </div>
+
+        </aside>
+
+
+        <!-- =========================================
+             Celebration Overlay
+        ========================================== -->
+        <div
+            id="celebration-overlay"
+            class="celebration-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =========================================
+             Buddy the Parrot
+        ========================================== -->
+        <div
+            class="buddy-container"
+            aria-label="Buddy the Parrot"
+        >
+
+            <div
+                class="buddy-speech-bubble hidden"
+                id="buddy-speech"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+            <img
+                src="buddy-mascot.svg"
+                alt="Buddy the Parrot"
+                class="buddy-mascot"
+                id="buddy-mascot"
+            >
+
         </div>
 
-    
-        <div id="celebration-overlay" class="celebration-overlay"></div>
 
-        <!-- Buddy the Parrot Mascot -->
-        <div class="buddy-container">
-            <div class="buddy-speech-bubble hidden" id="buddy-speech"></div>
-            <img src="buddy-mascot.svg" alt="Buddy the Parrot" class="buddy-mascot" id="buddy-mascot">
-        </div>
+        <!-- =========================================
+             Screen Reader Status
+        ========================================== -->
+        <div
+            id="app-status"
+            class="sr-only"
+            aria-live="polite"
+            aria-atomic="true"
+        ></div>
+
     </div>
 
-    <script src="app.js"></script>
+
+    <!-- =========================================
+         Application Script
+    ========================================== -->
+    <script
+        src="app.js"
+        defer
+    ></script>
+
 </body>
 </html>
