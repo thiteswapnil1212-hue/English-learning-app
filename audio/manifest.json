@@ -1,12 +1,20 @@
 {
-  "_readme": "Place pre-recorded Marathi MP3 audio files in this folder. The app auto-detects them and prefers them over TTS. If a file is missing, TTS plays instead — no configuration needed.",
-  "_naming_convention": "<screenKey>_<segment>.mp3  e.g. teaching-hello_intro.mp3",
+  "_readme": "Place pre-recorded Marathi MP3 audio files in this folder. The app automatically detects available recordings and prefers them over browser TTS. If a recording is missing, the app falls back to TTS automatically. No additional configuration is required.",
+
+  "_naming_convention": "<screenKey>_<segment>.mp3",
+  "_example": "teaching-hello_intro.mp3",
+
   "_recording_instructions": {
-    "speaker": "Marathi-speaking female teacher (age 28-45)",
-    "style": "Warm, slow, clear, encouraging — like a caring primary school teacher",
-    "rate": "Very slow natural speech (approx. 100-120 words per minute)",
-    "tone": "Calm, cheerful, patient",
-    "format": "MP3, 44100Hz, mono, 128kbps minimum"
+    "speaker": "Marathi-speaking female teacher, approximately 28-45 years old",
+    "style": "Warm, slow, clear, encouraging — like a caring school teacher",
+    "rate": "Very slow and natural speech, approximately 100-120 words per minute",
+    "tone": "Calm, cheerful, patient and supportive",
+    "language": "Marathi",
+    "format": "MP3",
+    "sample_rate": "44100 Hz",
+    "channels": "Mono",
+    "bitrate": "128 kbps minimum",
+    "silence": "Keep a short natural pause between sentences. For repeat cues, leave a clear pause at the end so students can respond."
   },
 
   "files": [
@@ -20,25 +28,28 @@
       "marathi_text": "आज आपण इंग्रजी शिकणार आहोत. तयार आहात?",
       "notes": "Slight upward lilt on 'तयार आहात?'"
     },
+
     {
       "filename": "lesson-intro_intro.mp3",
       "marathi_text": "मित्रांनो, आज आपण चार गोष्टी शिकणार आहोत.",
-      "notes": "Clear, confident."
+      "notes": "Clear and confident."
     },
     {
       "filename": "lesson-intro_next.mp3",
       "marathi_text": "नीट ऐका आणि लक्षात ठेवा.",
       "notes": "Gentle emphasis on 'नीट ऐका'."
     },
+
     {
       "filename": "warmup_intro.mp3",
       "marathi_text": "चला सुरुवात करूया! हात हलवा आणि माझ्यासोबत म्हणा.",
       "notes": "Energetic and cheerful."
     },
+
     {
       "filename": "teaching-hello_intro.mp3",
       "marathi_text": "मित्रांनो, आधी नीट ऐका.",
-      "notes": "Calm, inviting. Pause after speaking."
+      "notes": "Calm and inviting. Pause after speaking."
     },
     {
       "filename": "teaching-hello_meaning.mp3",
@@ -48,103 +59,113 @@
     {
       "filename": "teaching-hello_repeatCue.mp3",
       "marathi_text": "आता सगळे मिळून म्हणा...",
-      "notes": "Trailing pause at the end — give children time."
+      "notes": "Leave a clear trailing pause so students can repeat."
     },
     {
       "filename": "teaching-hello_praise.mp3",
       "marathi_text": "खूप छान! तुम्ही खूप छान बोललात.",
-      "notes": "Warm, genuine praise. Joyful tone."
+      "notes": "Warm, genuine praise with a joyful tone."
     },
+
     {
       "filename": "teaching-name_intro.mp3",
       "marathi_text": "आता आपण स्वतःची ओळख करून देणार आहोत.",
-      "notes": "Friendly, excited."
+      "notes": "Friendly and slightly excited."
     },
     {
       "filename": "teaching-name_meaning.mp3",
       "marathi_text": "'My name is' म्हणजे 'माझे नाव आहे'.",
-      "notes": "Speak both clearly."
+      "notes": "Speak both English and Marathi clearly."
     },
     {
       "filename": "teaching-name_repeatCue.mp3",
       "marathi_text": "आता सगळे मिळून म्हणा...",
-      "notes": "Trailing pause."
+      "notes": "Leave a clear trailing pause."
     },
     {
       "filename": "teaching-name_praise.mp3",
       "marathi_text": "शाब्बास! तुम्ही खूप छान ओळख करून दिली.",
-      "notes": "Proud, warm."
+      "notes": "Proud, warm and encouraging."
     },
+
     {
       "filename": "teaching-question_intro.mp3",
       "marathi_text": "आता आपण एक प्रश्न शिकणार आहोत.",
-      "notes": "Inviting tone."
+      "notes": "Inviting and curious tone."
     },
     {
       "filename": "teaching-question_meaning.mp3",
       "marathi_text": "'What is your name?' म्हणजे 'तुमचे नाव काय आहे?'.",
-      "notes": "Clear enunciation of both."
+      "notes": "Clear enunciation of both English and Marathi."
     },
     {
       "filename": "teaching-question_repeatCue.mp3",
       "marathi_text": "आता सगळे मिळून म्हणा...",
-      "notes": "Trailing pause."
+      "notes": "Leave a clear trailing pause."
     },
     {
       "filename": "teaching-question_praise.mp3",
       "marathi_text": "अप्रतिम! तुम्ही खूप हुशार आहात.",
-      "notes": "Bright, celebratory."
+      "notes": "Bright and celebratory."
     },
+
     {
       "filename": "teaching-dialogue_intro.mp3",
       "marathi_text": "आता दोन मित्र एकमेकांशी बोलत आहेत. नीट ऐका.",
-      "notes": "Storytelling voice."
+      "notes": "Use a gentle storytelling voice."
     },
     {
       "filename": "teaching-dialogue_meaning.mp3",
       "marathi_text": "हे एक छान संभाषण आहे. दोन मित्र एकमेकांना ओळखत आहेत.",
-      "notes": "Warm explanation."
+      "notes": "Warm and easy-to-understand explanation."
     },
     {
       "filename": "teaching-dialogue_repeatCue.mp3",
       "marathi_text": "आता सगळे एकत्र सराव करूया!",
-      "notes": "Enthusiastic."
+      "notes": "Enthusiastic and motivating."
     },
     {
       "filename": "teaching-dialogue_praise.mp3",
       "marathi_text": "वाहवा! खूप छान संभाषण केले तुम्ही!",
       "notes": "Very enthusiastic praise."
     },
+
     {
       "filename": "guided-practice_intro.mp3",
       "marathi_text": "आता तुम्ही स्वतः प्रयत्न करा. रिकाम्या जागी बरोबर शब्द टाका.",
-      "notes": "Encouraging, patient."
+      "notes": "Encouraging and patient. Give students time to think."
     },
+
     {
       "filename": "pair-activity_intro.mp3",
       "marathi_text": "आता शेजारी बसलेल्या मित्राशी सराव करा. एकमेकांना Hello म्हणा.",
-      "notes": "Fun, energetic."
+      "notes": "Fun, energetic and encouraging."
     },
+
     {
       "filename": "guess-animal-game_intro.mp3",
       "marathi_text": "मित्रांनो, आता आपण एक खेळ खेळणार आहोत. प्राणी ओळखा आणि इंग्रजीत बोला!",
-      "notes": "Playful and excited."
+      "notes": "Playful, excited and energetic."
     },
+
     {
       "filename": "interactive-game_intro.mp3",
       "marathi_text": "आता आपण जोड्या शोधण्याचा खेळ खेळूया. इंग्रजी आणि मराठी जोड्या शोधा.",
-      "notes": "Fun game voice."
+      "notes": "Fun game voice. Encourage participation."
     },
+
     {
       "filename": "revision_intro.mp3",
       "marathi_text": "आता आपण आज काय शिकलो ते आठवूया. माझ्यासोबत म्हणा.",
-      "notes": "Calm, reflective."
+      "notes": "Calm and reflective."
     },
+
     {
       "filename": "assessment_intro.mp3",
       "marathi_text": "आता आपण एक छोटी परीक्षा देणार आहोत. घाबरू नका, शांतपणे विचार करा.",
-      "notes": "Reassuring, calm. Emphasize 'घाबरू नका'."
+      "notes": "Reassuring and calm. Emphasize 'घाबरू नका'."
     },
+
     {
       "filename": "congratulations_intro.mp3",
       "marathi_text": "वाहवा! तुम्ही सगळ्यांनी खूप छान काम केले! मला तुमचा अभिमान आहे!",
@@ -153,24 +174,52 @@
     {
       "filename": "congratulations_next.mp3",
       "marathi_text": "तुम्ही आज इंग्रजीत खूप काही शिकले. हे सगळे रोजच्या आयुष्यात वापरा.",
-      "notes": "Warm closing message."
+      "notes": "Warm and encouraging closing message."
     },
+
     {
       "filename": "lesson-complete_intro.mp3",
       "marathi_text": "तुम्ही मिळून हे प्रमाणपत्र मिळवले! घरी सराव करा. धन्यवाद!",
-      "notes": "Warm, proud, final."
+      "notes": "Warm, proud and final."
     }
   ],
 
   "_shared_phrases": [
-    { "filename": "praise_khup_chhan.mp3",   "text": "खूप छान!" },
-    { "filename": "praise_shabbas.mp3",      "text": "शाब्बास!" },
-    { "filename": "praise_apratim.mp3",      "text": "अप्रतिम!" },
-    { "filename": "praise_vahava.mp3",       "text": "वाहवा!" },
-    { "filename": "encourage_try_again.mp3", "text": "घाबरू नका, परत प्रयत्न करा." },
-    { "filename": "encourage_once_more.mp3", "text": "छान प्रयत्न! आणखी एकदा म्हणा." },
-    { "filename": "cue_listen.mp3",          "text": "आधी नीट ऐका." },
-    { "filename": "cue_listen_again.mp3",    "text": "आता परत ऐका." },
-    { "filename": "cue_repeat_together.mp3", "text": "आता सगळे मिळून म्हणा..." }
+    {
+      "filename": "praise_khup_chhan.mp3",
+      "text": "खूप छान!"
+    },
+    {
+      "filename": "praise_shabbas.mp3",
+      "text": "शाब्बास!"
+    },
+    {
+      "filename": "praise_apratim.mp3",
+      "text": "अप्रतिम!"
+    },
+    {
+      "filename": "praise_vahava.mp3",
+      "text": "वाहवा!"
+    },
+    {
+      "filename": "encourage_try_again.mp3",
+      "text": "घाबरू नका, परत प्रयत्न करा."
+    },
+    {
+      "filename": "encourage_once_more.mp3",
+      "text": "छान प्रयत्न! आणखी एकदा म्हणा."
+    },
+    {
+      "filename": "cue_listen.mp3",
+      "text": "आधी नीट ऐका."
+    },
+    {
+      "filename": "cue_listen_again.mp3",
+      "text": "आता परत ऐका."
+    },
+    {
+      "filename": "cue_repeat_together.mp3",
+      "text": "आता सगळे मिळून म्हणा..."
+    }
   ]
 }
