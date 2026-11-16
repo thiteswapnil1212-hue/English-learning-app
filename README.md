@@ -2,7 +2,7 @@
 
 A simple **English learning app for young students (ages 4–7)** — letters, words and sounds with a friendly mascot buddy.
 
-**Live:** https://english-learning-app-eight-zeta.vercel.app/
+**Live:** https://english-learning-app-thiteswapnil1212-hues-projects.vercel.app/
 
 ## What's inside
 
@@ -15,6 +15,16 @@ A simple **English learning app for young students (ages 4–7)** — letters, w
 ## Tech stack
 
 Vanilla HTML · CSS · JavaScript (no framework, no build step)
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Kid([Young learner · ages 4–7]) --> App["index.html<br/>single-page app"]
+    App --> Logic["app.js<br/>letters · words · sounds"]
+    Logic --> Audio["audio/<br/>sound assets"]
+    Logic --> Mascot["buddy-mascot.svg<br/>friendly mascot"]
+```
 
 ## Run it
 
